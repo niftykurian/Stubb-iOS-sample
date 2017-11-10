@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FetchReposTableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *labelReposName;
 
 @end

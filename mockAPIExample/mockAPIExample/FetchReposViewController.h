@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (strong, nonatomic) IBOutlet UITextField *textfieldUserRepoSearch;
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonFetchRepos_outlet;
 

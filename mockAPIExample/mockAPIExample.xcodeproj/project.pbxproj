@@ -17,6 +17,9 @@
 		8F02B6861FB572920048B4CA /* mockAPIExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F02B6851FB572920048B4CA /* mockAPIExampleTests.m */; };
 		8F02B6911FB572920048B4CA /* mockAPIExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F02B6901FB572920048B4CA /* mockAPIExampleUITests.m */; };
 		8F02B6A01FB577B80048B4CA /* FetchReposTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F02B69F1FB577B80048B4CA /* FetchReposTableViewCell.m */; };
+		8F1EC99B1FB586CD00938E9B /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1EC99A1FB586CD00938E9B /* APIManager.m */; };
+		8F1EC99E1FB586DE00938E9B /* APIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1EC99D1FB586DE00938E9B /* APIController.m */; };
+		8F87FDEE1FB5BABB00D2CBBF /* MockAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F87FDED1FB5BABB00D2CBBF /* MockAPI.m */; };
 		92B5FDF114B91C0FDFCF08B7 /* libPods-mockAPIExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C9852D077986F812739D72 /* libPods-mockAPIExample.a */; };
 		CD4C9403B9E47170E83C8D91 /* libPods-mockAPIExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F72F2296E84EB26877D1F3F /* libPods-mockAPIExampleUITests.a */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,12 @@
 		8F02B6921FB572920048B4CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F02B69E1FB577B80048B4CA /* FetchReposTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchReposTableViewCell.h; sourceTree = "<group>"; };
 		8F02B69F1FB577B80048B4CA /* FetchReposTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchReposTableViewCell.m; sourceTree = "<group>"; };
+		8F1EC9991FB586CD00938E9B /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		8F1EC99A1FB586CD00938E9B /* APIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		8F1EC99C1FB586DE00938E9B /* APIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIController.h; sourceTree = "<group>"; };
+		8F1EC99D1FB586DE00938E9B /* APIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIController.m; sourceTree = "<group>"; };
+		8F87FDEC1FB5BABB00D2CBBF /* MockAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockAPI.h; sourceTree = "<group>"; };
+		8F87FDED1FB5BABB00D2CBBF /* MockAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockAPI.m; sourceTree = "<group>"; };
 		A6DAB65FAB2BF497C24C9EC7 /* Pods-mockAPIExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockAPIExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mockAPIExampleTests/Pods-mockAPIExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		B19A6C571989FCA58138ED46 /* Pods-mockAPIExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mockAPIExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mockAPIExampleUITests/Pods-mockAPIExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E442775C5B258621B929BC66 /* libPods-mockAPIExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mockAPIExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +132,12 @@
 			children = (
 				8F02B66E1FB572920048B4CA /* AppDelegate.h */,
 				8F02B66F1FB572920048B4CA /* AppDelegate.m */,
+				8F1EC9991FB586CD00938E9B /* APIManager.h */,
+				8F1EC99A1FB586CD00938E9B /* APIManager.m */,
+				8F1EC99C1FB586DE00938E9B /* APIController.h */,
+				8F1EC99D1FB586DE00938E9B /* APIController.m */,
+				8F87FDEC1FB5BABB00D2CBBF /* MockAPI.h */,
+				8F87FDED1FB5BABB00D2CBBF /* MockAPI.m */,
 				8F02B6711FB572920048B4CA /* FetchReposViewController.h */,
 				8F02B6721FB572920048B4CA /* FetchReposViewController.m */,
 				8F02B6741FB572920048B4CA /* Main.storyboard */,
@@ -474,10 +489,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1EC99E1FB586DE00938E9B /* APIController.m in Sources */,
 				8F02B6731FB572920048B4CA /* FetchReposViewController.m in Sources */,
 				8F02B6701FB572920048B4CA /* AppDelegate.m in Sources */,
 				8F02B6A01FB577B80048B4CA /* FetchReposTableViewCell.m in Sources */,
+				8F87FDEE1FB5BABB00D2CBBF /* MockAPI.m in Sources */,
 				8F02B66D1FB572920048B4CA /* main.m in Sources */,
+				8F1EC99B1FB586CD00938E9B /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +735,7 @@
 				8F02B6971FB572920048B4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F02B6981FB572920048B4CA /* Build configuration list for PBXNativeTarget "mockAPIExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +744,7 @@
 				8F02B69A1FB572920048B4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8F02B69B1FB572920048B4CA /* Build configuration list for PBXNativeTarget "mockAPIExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -733,6 +753,7 @@
 				8F02B69D1FB572920048B4CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
