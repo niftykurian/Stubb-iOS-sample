@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PS4-wO-D5u">
+                                <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github repos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kf-Rn-HRc">
+                                        <rect key="frame" x="8" y="38" width="359" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7kf-Rn-HRc" firstAttribute="top" secondItem="PS4-wO-D5u" secondAttribute="top" constant="38" id="GWR-JY-opf"/>
+                                    <constraint firstAttribute="trailing" secondItem="7kf-Rn-HRc" secondAttribute="trailing" constant="8" id="H6E-CC-lxE"/>
+                                    <constraint firstItem="7kf-Rn-HRc" firstAttribute="leading" secondItem="PS4-wO-D5u" secondAttribute="leading" constant="8" id="h88-uQ-nx6"/>
+                                    <constraint firstAttribute="height" constant="96" id="w5e-7h-McI"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-P5-mzV">
+                                <rect key="frame" x="16" y="141" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.35604798584903063" green="0.49170181757283909" blue="0.58092551256613756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Fetch github repos">
+                                    <color key="titleColor" red="0.97176434389999999" green="0.97176434389999999" blue="0.97176434389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonFetchRepos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQQ-kI-acH"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E7J-EP-vHT">
+                                <rect key="frame" x="0.0" y="194" width="375" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fetchRepos" rowHeight="60" id="Odd-cc-5iO" customClass="FetchReposTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Odd-cc-5iO" id="Ifs-Th-CVg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-hT-yOs">
+                                                    <rect key="frame" x="8" y="19" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IfN-hT-yOs" firstAttribute="leading" secondItem="Ifs-Th-CVg" secondAttribute="leading" constant="8" id="5ui-zY-Ihs"/>
+                                                <constraint firstItem="IfN-hT-yOs" firstAttribute="top" secondItem="Ifs-Th-CVg" secondAttribute="top" constant="19" id="Wr5-hF-kuG"/>
+                                                <constraint firstAttribute="trailing" secondItem="IfN-hT-yOs" secondAttribute="trailing" constant="8" id="cCA-6T-lD8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DAf-fX-fgU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gem-AA-Wkl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PS4-wO-D5u" secondAttribute="trailing" id="3eX-T4-LRO"/>
+                            <constraint firstItem="cjM-P5-mzV" firstAttribute="top" secondItem="PS4-wO-D5u" secondAttribute="bottom" constant="25" id="4Ta-AV-LR9"/>
+                            <constraint firstItem="E7J-EP-vHT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6b5-El-tmg"/>
+                            <constraint firstAttribute="trailing" secondItem="cjM-P5-mzV" secondAttribute="trailing" constant="16" id="6fR-dY-JzU"/>
+                            <constraint firstItem="E7J-EP-vHT" firstAttribute="top" secondItem="cjM-P5-mzV" secondAttribute="bottom" constant="23" id="CAG-Xg-VQk"/>
+                            <constraint firstItem="cjM-P5-mzV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="H0G-vF-48a"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E7J-EP-vHT" secondAttribute="bottom" id="RxL-Sg-Azh"/>
+                            <constraint firstItem="PS4-wO-D5u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="cyM-Rs-ydD"/>
+                            <constraint firstAttribute="trailing" secondItem="E7J-EP-vHT" secondAttribute="trailing" id="hlA-lK-oYp"/>
+                            <constraint firstItem="PS4-wO-D5u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tna-Rq-kcz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonFetchRepos_outlet" destination="cjM-P5-mzV" id="lzg-Ne-bHl"/>
+                        <outlet property="tableViewRepoList" destination="E7J-EP-vHT" id="czk-Oa-ltJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

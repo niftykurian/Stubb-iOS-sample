@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FetchReposTableViewCell.h
 //  mockAPIExample
 //
 //  Created by MobMe on 10/11/17.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FetchReposTableViewCell : UITableViewCell
 
 @end
-
